@@ -9,5 +9,5 @@
         android:id="@+id/tasksFragment"
         android:name="com.fahreddinsevindir.todolist.ui.tasks.TasksFragment"
         android:label="fragment_task"
-        tools:layout="@layout/fragment_task" />
+        tools:layout="@layout/fragment_tasks" />
 </navigation>

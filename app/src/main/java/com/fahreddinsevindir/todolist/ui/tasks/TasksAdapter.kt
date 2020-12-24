@@ -21,25 +21,23 @@ class TasksAdapter : ListAdapter<Task, TasksAdapter.TasksViewHolder>(DiffCallbac
         holder.bind(currentItem)
     }
 
-    class TasksViewHolder(private val binding: ItemTaskBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class TasksViewHolder(private val binding: ItemTaskBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(task: Task) {
             binding.apply {
                 checkBoxCompleted.isChecked = task.completed
                 textViewName.text = task.name
                 textViewName.paint.isStrikeThruText = task.completed
-                labelPriority.isVisible = task.important
+                labelPriority.isVisible = task.uimportant
             }
         }
     }
 
     class DiffCallback : DiffUtil.ItemCallback<Task>() {
-        override fun areItemsTheSame(oldItem: Task, newItem: Task) = oldItem.uid == newItem.uid
-
+        override fun areItemsTheSame(oldItem: Task, newItem: Task) =
+            oldItem.uid == newItem.uid
 
         override fun areContentsTheSame(oldItem: Task, newItem: Task) =
             oldItem == newItem
-
     }
 }

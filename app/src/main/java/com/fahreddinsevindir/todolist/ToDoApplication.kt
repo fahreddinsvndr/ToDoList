@@ -4,5 +4,5 @@ import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class ToDoListApplication: Application() {
+class ToDoApplication : Application() {
 }
