@@ -1,7 +1,6 @@
 package com.fahreddinsevindir.todolist.data
 
 import androidx.room.*
-import com.fahreddinsevindir.todolist.ui.tasks.SortOrder
 import kotlinx.coroutines.flow.Flow
 
 @Dao
